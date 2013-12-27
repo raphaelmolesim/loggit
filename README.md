@@ -14,7 +14,7 @@ Instalação
 ---
 
 ```sh
-git clone [git-repo-url] loggit
+git clone git@github.com:raphaelmolesim/loggit.git loggit
 cd loggit
 bundle install
 cp -r examples
