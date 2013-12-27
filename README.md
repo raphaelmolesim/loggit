@@ -1,7 +1,5 @@
-
 Bem vindo ao Loggit
 =========
----
 
 Loggit é uma aplicação para apontamento de horas em lotes no Redmine. Através algumas simples configurações você pode realizar o apontamento de hora de toda uma semana em poucos minutos!
 
@@ -57,4 +55,4 @@ License
 
 Except where otherwise noted, content on this app is licensed under a Creative Commons Attribution 4.0 International license.
 
-**Free Software, Hell Yeah!**st
+**Free Software, Hell Yeah!**
