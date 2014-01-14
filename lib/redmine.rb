@@ -38,7 +38,8 @@ class Redmine
   
   def load_projects 
     current_page = 0
-    all_projects = []
+    return @all_projects if @all_projects
+    @all_projects = []
     
     begin
       current_page += 1
@@ -53,7 +54,7 @@ class Redmine
       res = https.request(req)
       
       json = JSON res.body
-      all_projects += json['projects']
+      @all_projects += json['projects']
     
       MyLogger.puts "URI: #{uri}"
       
@@ -61,7 +62,7 @@ class Redmine
       
     end while json['total_count'] > params[:limit] * current_page
     
-    all_projects
+    @all_projects
   end
   
   def response_expected

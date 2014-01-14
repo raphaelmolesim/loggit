@@ -1,8 +1,13 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
+require 'activities'
 require 'time_entry'
 require 'redmine'
+require 'project'
+require 'loggit'
+require 'my_logger'
 require 'importer'
 STDOUT.sync = true
+MyLogger::LEVEL = :info
 
 importer = Importer.new
 time_entries = importer.parse_csv ARGV[0]

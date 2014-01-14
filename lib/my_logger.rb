@@ -3,7 +3,7 @@ class MyLogger
   
   class << self
     def puts message
-      puts message if LEVEL != :none
+      Kernel::puts message if LEVEL != :none
     end
   end
 end
