@@ -20,9 +20,10 @@ time_entries.map(&:project_name).uniq.each do |project|
     puts "* Project: #{project} Date: #{p.spent_on} Duration: #{p.hours} Desc: #{p.full_description[0,60]}" 
   end
   redmine = Redmine.instance
+  total_of_hours = project_entries.inject(0) { |r,i| r + i.hours }
   
   while true
-    puts "==> Upload time entries now? (y or n)"
+    puts "==> Upload time entries now? (y or n) #{total_of_hours} hours"
     begin
       system("stty raw -echo")
       str = STDIN.getc
